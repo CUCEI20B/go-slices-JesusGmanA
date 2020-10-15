@@ -1,7 +1,19 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+	"strings"
+)
 
-func main()  {
-	fmt.Println("Hola Mundo!") // eliminar esta línea
+func main() {
+	var valores string
+	fmt.Scanln(valores)
+	s := strings.Split(valores, "\n")
+	sum := 0
+	for _, v := range s {
+		aux, _ := strconv.Atoi(v)
+		sum += aux
+	}
+	fmt.Println(sum)
 }
