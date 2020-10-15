@@ -9,7 +9,7 @@ func main() {
 	fmt.Scan(&tamanio)
 	s := make([]int, 0, tamanio)
 	for i := 0; i < tamanio; i++ {
-		fmt.Scan(aux)
+		fmt.Scan(&aux)
 		s = append(s, aux)
 	}
 	sum := 0
