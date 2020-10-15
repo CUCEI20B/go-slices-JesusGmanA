@@ -8,7 +8,7 @@ import (
 
 func main() {
 	var valores string
-	fmt.Scan(&valores)
+	fmt.Scanln(&valores)
 	split := strings.Split(valores, "\r\n")
 	s := split[1:]
 	sum := 0
