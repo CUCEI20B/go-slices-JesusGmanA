@@ -9,7 +9,8 @@ import (
 func main() {
 	var valores string
 	fmt.Scanln(valores)
-	s := strings.Split(valores, "\n")
+	split := strings.Split(valores, "\r\n")
+	s := split[1:]
 	sum := 0
 	for _, v := range s {
 		aux, _ := strconv.Atoi(v)
