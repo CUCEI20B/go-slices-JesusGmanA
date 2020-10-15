@@ -2,20 +2,19 @@ package main
 
 import (
 	"fmt"
-	"strconv"
-	"strings"
 )
 
 func main() {
-	var valores string
-	fmt.Scanln(&valores)
-	split := strings.Split(valores, "\r\n")
-	fmt.Print(split)
-	s := split[1:]
+	var tamanio, aux int
+	fmt.Scan(&tamanio)
+	s := make([]int, 0, tamanio)
+	for i := 0; i < tamanio; i++ {
+		fmt.Scan(aux)
+		s = append(s, aux)
+	}
 	sum := 0
 	for _, v := range s {
-		aux, _ := strconv.Atoi(v)
-		sum += aux
+		sum += v
 	}
 	fmt.Println(sum)
 }
